@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary: hsl(47, 88%, 63%);
+	--neutral-white: hsl(0, 0%, 100%);
+	--neutral-gray: hsl(0, 0%, 50%);
+	--neutral-black: hsl(0, 0%, 7%);
+}
+@font-face {
+	font-family: Figtree;
+	src: url('../fonts/Figtree-VariableFont_wght.ttf');
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	min-height: 100vh;
+	width: 100%;
+	background-color: var(--primary);
+	font-family: 'Figtree', sans-serif;
+}
+.card {
+	max-width: 384px;
+	background-color: hsl(0, 0%, 100%);
+	border: 1px solid black;
+	box-shadow: 8px 8px 0 black;
+}
+.article {
+	margin: 24px;
+}
+.article__img {
+	max-height: 200px;
+	margin-bottom: 24px;
+}
+.article__category {
+	display: inline-block;
+	padding: 6px 13px;
+	color: var(--neutral-black);
+	background-color: var(--primary);
+	border-radius: 4px;
+}
+.article__publish-date {
+	color: var(--neutral-black);
+}
+.article__title {
+	font-size: 24px;
+}
+.article__description {
+	margin-bottom: 24px;
+	padding-right: 6px;
+	color: var(--neutral-gray);
+	font-size: 16px;
+	line-height: 25px;
+}
+.author {
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+}
+.author__pic {
+	height: 32px;
+	width: 32px;
+}
+.author__name {
+	margin-left: 10px;
+	color: var(--neutral-black);
+	line-height: 32px;
+}
+.article__title:hover {
+	color: var(--primary);
+}
+/* DON'T REPEAT YOURSELF */
+.card,
+.article__img {
+	border-radius: 15px;
+}
+.article__category,
+.article__publish-date,
+.author__name {
+	font-size: 14px;
+}
+.article__category,
+.article__publish-date,
+.article__title {
+	margin-bottom: 12px;
+}
+.article__category,
+.article__title,
+.author__name {
+	font-weight: bold;
+}
+/* MEDIA */
+@media (max-width: 350px) {
+	.card {
+		max-width: 272px;
+	}
+	.article__img {
+		max-width: 224px;
+	}
+}
+
+@media (min-width: 351px) and (max-width: 375px) {
+	.card {
+		max-width: 327px;
+	}
+	.article__img {
+		max-width: 279px;
+	}
+}
